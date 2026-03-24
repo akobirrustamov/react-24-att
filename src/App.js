@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-
+ 
   const [data, setData] = useState(
     [
     {id:1, name: "Asil", age:20},
@@ -17,6 +17,18 @@ function App() {
   ]
 )
 
+
+  function handleDelete(id){
+      
+
+
+      setData(
+        data.filter((item)=>{
+          return item.id != id
+        }))
+      
+    
+  }
   return (
     <div className="App">
      <h1 className='text-3xl my-4 font-bold '>1-24 ATT guruh talabalari reactjs darsida </h1>
@@ -25,9 +37,10 @@ function App() {
 
       {
         data.map((item)=>
-          <div key={item.id} className='flex justify-between border-b-2'>
+          <div key={item.id} className='flex justify-between border-b-2 px-4 py-2'>
              <p>{item.name}</p>
              <p>{item.age}</p>
+             <p onClick={()=>handleDelete(item.id)}><i className="fa-solid fa-trash"></i></p>
           </div>
         )
           
