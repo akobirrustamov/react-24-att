@@ -3,7 +3,8 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-
+  console.log("salom1");
+  
   const [data, setData] = useState(
     [
     {id:1, name: "Asil", age:20},
