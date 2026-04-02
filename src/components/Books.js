@@ -79,7 +79,9 @@ export default function Books() {
                {
 
                 showModal &&
-                 <Modal onClose={closeModal}>
+                 <Modal 
+                 
+                 onClose={closeModal}>
                         <div >
                             <p className='text-4xl text-center my-4 font-bold'>Badiiy kitoblar. O'qing va orom oling</p>
 
